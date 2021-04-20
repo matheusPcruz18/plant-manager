@@ -1,32 +1,50 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import { 
-  Container, 
+  Container,
+  Wrapper,
   WelcomeTitle, 
   WelcomeImage, 
   WelcomeSubTitle,
+  WelcomeBtn
 } from './style';
-
-import { Button } from '../../components/Button';
-
+import { useNavigation } from '@react-navigation/core';
+//ICONS
+import { Feather } from '@expo/vector-icons';
+//ASSETS
 import wateringImg from '../../assets/watering.png';
 
+
 export function Welcome() {
+  const navigation = useNavigation();
+
+  const handleStart = () => {
+    navigation.navigate('UserIdentification')
+  }
+
   return(
     <Container>
-      <WelcomeTitle>
-        Gerencie {'\n'}suas plantas de {'\n'} forma fácil
-      </WelcomeTitle>
+      <Wrapper>
+        <WelcomeTitle>
+          Gerencie{'\n'}suas plantas de{'\n'} forma fácil
+        </WelcomeTitle>
 
-      <WelcomeImage source={wateringImg} />
+        <WelcomeImage 
+          source={wateringImg}
+          resizeMode="contain"
+        />
 
-      <WelcomeSubTitle>
-        Não esqueça mais de regar suas {'\n'} plantas. 
-        Nós cuidamos de lembrar você {'\n'} sempre que precisar.
-      </WelcomeSubTitle>
+        <WelcomeSubTitle>
+          Não esqueça mais de regar suas plantas.
+          Nós cuidamos de lembrar você sempre que precisar.
+        </WelcomeSubTitle>
 
-      <Button title=">"/>
-      
+        <WelcomeBtn activeOpacity={0.6} onPress={handleStart}>
+            <Feather 
+              name="chevron-right"
+              style={{fontSize: 30, color: '#fff'}}
+            />
+        </WelcomeBtn>
+      </Wrapper>
     </Container>
   )
 }
