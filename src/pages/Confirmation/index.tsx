@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 import { 
   Container,
   Content,
@@ -8,12 +8,17 @@ import {
   SubTitle,
   Footer
 } from './style';
-
+//COMPONENTS
 import { Button } from '../../components/Button';
 
-import colors from '../../styles/colors';
 
 export function Confirmation() {
+  const navigation = useNavigation();
+
+  const handleMoveOn = () => {
+    navigation.navigate('PlantSelect');
+  }
+
   return(
     <Container>
         <Content>
@@ -30,7 +35,7 @@ export function Confirmation() {
             </SubTitle>
 
           <Footer>
-            <Button title="Começar" />
+            <Button title="Começar" onPress={handleMoveOn} />
           </Footer>
           
         </Content>
