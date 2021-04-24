@@ -22,7 +22,6 @@ const AuthRoutes = () => {
           borderTopRightRadius: 10
         },
       }}
-      initialRouteName="MyPlants"
     >
       <AppTab.Screen 
         name="NewPlant" 

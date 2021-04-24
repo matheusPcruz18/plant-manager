@@ -3,7 +3,7 @@ import { getBottomSpace } from 'react-native-iphone-x-helper';
 import colors from '../../styles/colors';
 import fonts from '../../styles/fonts';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   flex: 1;
   justify-content: space-between;
   background-color: ${colors.shape};

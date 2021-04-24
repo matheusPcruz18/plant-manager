@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { 
+import { StyleSheet, ScrollView, View } from 'react-native';
+import {
   Container,
   PlantInfo,
   PlantName,
@@ -21,6 +22,7 @@ import { PlantProps, savePlant } from '../../libs/storage';
 
 import waterDrop from '../../assets/waterdrop.png';
 import { Button } from '../../components/Button';
+import colors from '../../styles/colors';
 
 interface Params {
   plant: PlantProps;
@@ -74,53 +76,67 @@ export function PlantSave() {
   }
 
   return(
-    <Container>
-      <PlantInfo>
-        <SvgFromUri 
-          uri={plant.photo} 
-          height={150} 
-          width={150} 
-        />
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={styles.container}
+    >
+      <View style={styles.container}>
+        <PlantInfo>
+          <SvgFromUri 
+            uri={plant.photo} 
+            height={150} 
+            width={150} 
+          />
 
-        <PlantName>{plant.name}</PlantName>
+          <PlantName>{plant.name}</PlantName>
 
-        <PlantAbout>
-          {plant.about}
-        </PlantAbout>
-      </PlantInfo>
+          <PlantAbout>
+            {plant.about}
+          </PlantAbout>
+        </PlantInfo>
 
-      <Controller>
-        <TipContainer>
-          <WaterDropImage source={waterDrop} />
-          <TipText>{plant.water_tips}</TipText>
-        </TipContainer>
+        <Controller>
+          <TipContainer>
+            <WaterDropImage source={waterDrop} />
+            <TipText>{plant.water_tips}</TipText>
+          </TipContainer>
 
-        <AlertLabel>Escolha o melhor horário para ser lembrado</AlertLabel>
+          <AlertLabel>Escolha o melhor horário para ser lembrado</AlertLabel>
 
-        {
-          showDatePicker && (
-            <DateTimePicker
-              value={selectedDateTime}
-              mode="time"
-              onChange={handleChangeTime}
-            />
-          )
-        }
+          {
+            showDatePicker && (
+              <DateTimePicker
+                value={selectedDateTime}
+                mode="time"
+                onChange={handleChangeTime}
+                is24Hour={true}
+              />
+            )
+          }
 
-        {
-          Platform.OS === 'android' && (
-            <AndroidTimePickerButton
-              onPress={handleOpenAndroidTimePicker}
-            >
-              <TimePickerText>
-                Mudar {format(selectedDateTime, 'HH:mm')}
-              </TimePickerText>
-            </AndroidTimePickerButton>
-          )
-        }
+          {
+            Platform.OS === 'android' && (
+              <AndroidTimePickerButton
+                onPress={handleOpenAndroidTimePicker}
+              >
+                <TimePickerText>
+                  Mudar {format(selectedDateTime, 'HH:mm')}
+                </TimePickerText>
+              </AndroidTimePickerButton>
+            )
+          }
 
-        <Button title="Cadastrar planta" onPress={handleSave} />
-      </Controller>
-    </Container>
+          <Button title="Cadastrar planta" onPress={handleSave} />
+        </Controller>
+      </View>
+    </ScrollView>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'space-between',
+    backgroundColor: colors.shape
+  }
+})
