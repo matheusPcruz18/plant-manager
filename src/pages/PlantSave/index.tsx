@@ -43,7 +43,7 @@ export function PlantSave() {
 
     if(dateTime && isBefore(dateTime, new Date())){
       setSelectedDateTime(new Date());
-      return Alert.alert('Escolha uma hora futura! ⏰')
+      return Alert.alert('Escolha uma hora futura! ⏰');
     }
 
     if(dateTime){
