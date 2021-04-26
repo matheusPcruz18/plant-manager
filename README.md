@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/icon.png" alt="test" style="width: 100px"/>
+<img src="assets/icon.png" alt="test" width="100"/>
 
 </div>
 
@@ -14,12 +14,12 @@ Este projeto faz parte de mais uma semana em rumo do proximo nível, desenvolvid
 
 ## 📷Veja:
 
-<img src="src/github/1.jpg" alt="image" style="width: 150px" />
-<img src="src/github/2.jpg" alt="image" style="width: 150px" />
-<img src="src/github/3.jpg" alt="image" style="width: 150px" />
-<img src="src/github/4.jpg" alt="image" style="width: 150px" />
-<img src="src/github/5.jpg" alt="image" style="width: 150px" />
-<img src="src/github/6.jpg" alt="image" style="width: 150px" />
+<img src="src/github/1.jpg" alt="image" width="150" />
+<img src="src/github/2.jpg" alt="image" width="150" />
+<img src="src/github/3.jpg" alt="image" width="150" />
+<img src="src/github/4.jpg" alt="image" width="150" />
+<img src="src/github/5.jpg" alt="image" width="150" />
+<img src="src/github/6.jpg" alt="image" width="150" />
 
 <br>
 <br>
