@@ -15,12 +15,12 @@ Este projeto faz parte de mais uma semana em rumo do proximo nível, desenvolvid
 ## 📷Veja:
 
 <p float="left">
-  <img src="src/github/1.jpg" alt="image" width="250" />
-  <img src="src/github/2.jpg" alt="image" width="250" />
-  <img src="src/github/3.jpg" alt="image" width="250" />
-  <img src="src/github/4.jpg" alt="image" width="250" />
-  <img src="src/github/5.jpg" alt="image" width="250" />
-  <img src="src/github/6.jpg" alt="image" width="250" />
+  <img src="src/github/1.jpg" alt="image" width="150" />
+  <img src="src/github/2.jpg" alt="image" width="150" />
+  <img src="src/github/3.jpg" alt="image" width="150" />
+  <img src="src/github/4.jpg" alt="image" width="150" />
+  <img src="src/github/5.jpg" alt="image" width="150" />
+  <img src="src/github/6.jpg" alt="image" width="150" />
 </p>
 <br>
 <br>
